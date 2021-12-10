@@ -44,6 +44,11 @@ module.exports = {
                 type: 'src',
               },
               {
+                tag: 'source',
+                attribute: 'data-src',
+                type: 'src',
+              },
+              {
                 tag: 'video',
                 attribute: 'poster',
                 type: 'src',
