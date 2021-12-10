@@ -34,8 +34,8 @@ module.exports = {
                 type: 'src',
               },
               {
-                tag: 'img',
-                attribute: 'data-gallery-src',
+                tag: 'source',
+                attribute: 'srcset',
                 type: 'src',
               },
               {
