@@ -24,6 +24,11 @@
     margin: $button-margin;
     transition: 0.2s;
 
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: 11px;
+      padding: 12px 50px;
+    }
+
     &:hover {
       color: $button-color;
       background-color: $second-color;

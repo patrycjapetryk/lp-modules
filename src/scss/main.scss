@@ -30,8 +30,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
   padding: calc($gap-desktop / 2) 0;
   gap: $gap-desktop;
+  @media (max-width: $breakpoint-tablet-width) {
+    padding: calc($gap-mobile / 2) 0;
+    gap: $gap-mobile;
+  }
 
   box-sizing: border-box;
   *,

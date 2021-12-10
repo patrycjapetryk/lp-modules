@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: $main-max-width) {
+    justify-content: space-around;
+  }
+
   &--fullscreen {
     width: 100vw;
   }
@@ -21,6 +25,14 @@
     justify-content: flex-start;
     width: 100%;
     position: relative;
+
+    &--l {
+      width: 50%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+      }
+    }
 
     &--m {
       width: 50%;
@@ -39,6 +51,10 @@
 
       @media (max-width: $breakpoint-tablet-width) {
         width: 50%;
+
+        &:first-child {
+          margin-bottom: $gap-mobile;
+        }
       }
     }
   }
@@ -48,6 +64,8 @@
     width: 100%;
     height: auto;
   }
+
+  // header
 
   &__header {
     position: relative;
@@ -59,6 +77,11 @@
     font-weight: $global-font-weight;
     padding: 0;
     margin: 25px 0 0 2px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-m;
+      line-height: 1.2;
+    }
   }
 
   &__info {
@@ -69,6 +92,10 @@
     font-weight: $global-font-weight;
     letter-spacing: 0;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-xs;
+    }
   }
 
   &__cta {
@@ -76,5 +103,10 @@
     font-weight: $global-font-weight;
     text-transform: uppercase;
     margin: 3px 0 0 2px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-m;
+      margin: 0 0 0 2px;
+    }
   }
 }
