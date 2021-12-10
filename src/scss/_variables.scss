@@ -4,12 +4,9 @@ $black: #000000;
 $white: #ffffff;
 $dark-grey: #222222;
 $light-grey: #f8f8f8;
-$yellow: #fff155;
-$beige: #fdf9f4;
-$blue: #2372f6;
 
 $main-color: $black;
-$second-color: $blue;
+$second-color: $white;
 
 // fonts family
 
@@ -18,31 +15,29 @@ $second-font: 'UniversLTPro-65Bold', sans-serif;
 
 // fonts size
 
-$global-font-size: 16px;
-$global-font-size-s: 10px;
-$global-font-size-m: 14px;
-$global-font-size-l: 40px;
+$global-font-size: 18px;
+$global-font-size-xs: 7px;
+$global-font-size-s: 11px;
+$global-font-size-m: 13px;
+
+$global-line-height: 1.4;
+$global-font-weight: normal;
+$global-letter-spacing: normal;
+
+// global margins and padding
+
+$margin-desktop: 100px;
+$margin-mobile: 60px;
 
 // button
 
 $button-font: $main-font;
 $button-font-size: 12px;
-$button-line-height: 1.4;
+$button-line-height: 1.1;
 $button-padding: 10px 40px;
 $button-margin: 30px 0;
-$button-color: $black;
-// $button-border-radius: 20px;
+$button-color: $main-color;
 $button-border-radius: 0;
-
-$global-line-hight: 1.4;
-$global-font-weight: normal;
-$global-letter-spacing: normal;
-
-// margins and padding
-
-$margin-desktop: 100px;
-$margin-mobile: 60px;
-$padding-mobile: 15px;
 
 // breakpoints
 

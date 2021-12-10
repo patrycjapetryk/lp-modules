@@ -1,4 +1,4 @@
-@import '_normalize';
+// @import '_normalize';
 
 @import '_variables';
 @import '_mixins';
@@ -7,23 +7,17 @@
 @import 'modules/_header';
 @import 'modules/_background';
 @import 'modules/_video-gallery';
-@import 'modules/_carousel';
-@import 'modules/_scroll-carousel';
-@import 'modules/_scroll-carousel-with-arrows';
 @import 'modules/_button';
 @import 'modules/_gallery';
-@import 'modules/_animation-on-scroll';
 @import 'modules/_product';
 
 .main {
   color: $main-color;
   font-family: $main-font;
   font-size: $global-font-size;
-  line-height: $global-line-hight;
+  line-height: $global-line-height;
   font-weight: $global-font-weight;
   letter-spacing: $global-letter-spacing;
-
-  min-height: 100vh;
   min-width: $main-min-width;
   max-width: $main-max-width;
   margin: 0 auto;

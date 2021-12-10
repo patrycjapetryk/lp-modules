@@ -2,8 +2,7 @@
 @import '../_mixins';
 
 .button {
-  @include main-margin-bottom;
-  @include main-padding;
+  @include main-margin;
   width: 100%;
   text-align: center;
   display: flex;
@@ -18,7 +17,8 @@
     line-height: $button-line-height;
     border-radius: $button-border-radius;
     border: 1px solid $button-color;
-    color: $button-color;
+    color: $second-color;
+    background-color: $main-color;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.02em;
@@ -26,39 +26,17 @@
     transition: 0.2s;
 
     &:hover {
-      color: $white;
-      background-color: $button-color;
+      color: $button-color;
+      background-color: $second-color;
     }
 
-    &--black {
-      color: $white;
-      background-color: $button-color;
+    &--outlined {
+      color: $button-color;
+      background-color: transparent;
+
       &:hover {
         background-color: transparent;
         color: $button-color;
-      }
-    }
-  }
-
-  &__link-with-arrow {
-    font-size: $button-font-size;
-    color: $button-color;
-    line-height: $button-line-height;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    margin: $button-margin;
-
-    &::before {
-      content: url(../assets/images/arrow.svg);
-      display: inline-block;
-      transform: translate(-14px, -1px);
-      transition: 0.3s;
-    }
-
-    &:hover {
-      &::before {
-        transform: translate(-10px, -1px);
       }
     }
   }
