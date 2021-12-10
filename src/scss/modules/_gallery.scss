@@ -1,65 +1,44 @@
 @import '../_variables';
-@import '../_mixins';
 
 .gallery {
-  @include main-margin;
   width: 100%;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  &--center {
-    justify-content: center;
+  &--fullscreen {
+    width: 100vw;
   }
 
-  &--right {
-    justify-content: flex-end;
+  &--center {
+    justify-content: center;
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 70%;
+    width: 100%;
     position: relative;
-
-    @media (max-width: $breakpoint-mobile-width) {
-      width: 100%;
-    }
-
-    &--l {
-      width: 60%;
-
-      @media (max-width: $breakpoint-mobile-width) {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-    }
 
     &--m {
       width: 50%;
     }
 
     &--s {
-      width: 33%;
+      width: 42%;
 
-      @media (max-width: $breakpoint-mobile-width) {
-        width: 100%;
-        margin-bottom: 30px;
+      @media (max-width: $breakpoint-tablet-width) {
+        width: 50%;
       }
     }
 
     &--xs {
       width: 24%;
-      margin: 0 0 16px;
 
       @media (max-width: $breakpoint-tablet-width) {
-        width: 49%;
-      }
-
-      @media (max-width: $breakpoint-mobile-width) {
-        width: 100%;
+        width: 50%;
       }
     }
   }
@@ -70,19 +49,25 @@
     height: auto;
   }
 
+  &__header {
+    position: relative;
+    width: 100%;
+  }
+
   &__title {
     font-size: $global-font-size;
     font-weight: $global-font-weight;
-    margin: 34px 0 0 2px;
-    position: relative;
+    padding: 0;
+    margin: 25px 0 0 2px;
   }
 
   &__info {
     position: absolute;
-    left: 0;
-    top: -26px;
+    left: 2px;
+    top: 6px;
     font-size: $global-font-size-s;
     font-weight: $global-font-weight;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
 

@@ -1,14 +1,13 @@
 @import '../_variables';
-@import '../_mixins';
 
 .button {
-  @include main-margin;
   width: 100%;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: $button-font;
+  letter-spacing: $button-letter-spacing;
 
   &__link {
     display: block;
@@ -21,7 +20,6 @@
     background-color: $main-color;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.02em;
     margin: $button-margin;
     transition: 0.2s;
 

@@ -1,0 +1,12 @@
+@import '../_variables';
+
+.paragraph {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__span {
+    max-width: 70%;
+  }
+}

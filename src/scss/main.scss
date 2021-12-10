@@ -1,7 +1,4 @@
-// @import '_normalize';
-
 @import '_variables';
-@import '_mixins';
 @import '_fonts';
 
 @import 'modules/_header';
@@ -10,6 +7,13 @@
 @import 'modules/_button';
 @import 'modules/_gallery';
 @import 'modules/_product';
+@import 'modules/_paragraph';
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 .main {
   color: $main-color;
@@ -21,12 +25,13 @@
   min-width: $main-min-width;
   max-width: $main-max-width;
   margin: 0 auto;
-  overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: calc($gap-desktop / 2) 0;
+  gap: $gap-desktop;
 
   box-sizing: border-box;
   *,
