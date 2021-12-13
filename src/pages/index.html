@@ -393,5 +393,35 @@
         <a class="button__link" href="#">Button</a>
       </div>
     </div>
+
+    <script defer>
+      (() => {
+        'use strict';
+        var videoTag = document.querySelector('.header__video--js'),
+          videoSourceTag = document.querySelector('.header__video--js source'),
+          videoSourceSrc = videoSourceTag.getAttribute('src'),
+          videoSourceDataSrc = videoSourceTag.getAttribute('data-src');
+
+        function setVideoSource() {
+          var windowWidth = window.innerWidth,
+            videoSource = videoSourceTag.getAttribute('src');
+
+          if (windowWidth > 764) {
+            if (videoSource !== videoSourceDataSrc) {
+              videoSourceTag.setAttribute('src', videoSourceDataSrc);
+              videoTag.load();
+            }
+          } else {
+            if (videoSource !== videoSourceSrc) {
+              videoSourceTag.setAttribute('src', videoSourceSrc);
+              videoTag.load();
+            }
+          }
+        }
+
+        window.addEventListener('load', setVideoSource);
+        window.addEventListener('resize', setVideoSource);
+      })();
+    </script>
   </body>
 </html>
