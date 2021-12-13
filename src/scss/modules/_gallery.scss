@@ -72,18 +72,6 @@
     width: 100%;
   }
 
-  &__title {
-    font-size: $global-font-size;
-    font-weight: $global-font-weight;
-    padding: 0;
-    margin: 25px 0 0 2px;
-
-    @media (max-width: $breakpoint-mobile-width) {
-      font-size: $global-font-size-m;
-      line-height: 1.2;
-    }
-  }
-
   &__info {
     position: absolute;
     left: 2px;
@@ -98,14 +86,26 @@
     }
   }
 
-  &__cta {
+  &__title {
     font-size: $global-font-size;
+    font-weight: $global-font-weight;
+    padding: 0;
+    margin: 25px 0 0 2px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      font-size: $global-font-size-m;
+      line-height: 1.2;
+    }
+  }
+
+  &__cta {
+    font-size: $global-font-size-l;
     font-weight: $global-font-weight;
     text-transform: uppercase;
     margin: 3px 0 0 2px;
 
     @media (max-width: $breakpoint-mobile-width) {
-      font-size: $global-font-size-m;
+      font-size: $global-font-size-ms;
       margin: 0 0 0 2px;
     }
   }
