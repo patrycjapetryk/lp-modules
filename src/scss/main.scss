@@ -9,8 +9,35 @@
 // @import 'modules/_background';
 
 body {
+  width: 100%;
   margin: 0;
   overflow-x: hidden;
+
+  --viewportWidth: calc(100vw - var(--scrollbarWidth));
+}
+
+.c-content {
+  padding: 0 0 20px;
+}
+
+.c-headline {
+  display: none;
+}
+
+.c-layout_row.c-layout_item.is-breadcrumb.is-container {
+  display: none;
+}
+
+.c-layout_col.is-content,
+.c-layout_row.is-content {
+  @media screen and (min-width: 980px) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.c-layout_col.c-layout_item.is-sidebar {
+  display: none;
 }
 
 .main {
@@ -29,10 +56,11 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  padding: calc($gap-desktop / 2) 0;
+  padding: 0 0 calc($gap-desktop / 2) 0;
   gap: $gap-desktop;
+
   @media (max-width: $breakpoint-tablet-width) {
-    padding: calc($gap-mobile / 2) 0;
+    padding: 0 0 calc($gap-mobile / 2) 0;
     gap: $gap-mobile;
   }
 

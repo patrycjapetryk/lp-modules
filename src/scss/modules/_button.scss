@@ -17,7 +17,7 @@
     line-height: $button-line-height;
     border-radius: $button-border-radius;
     border: 1px solid $button-color;
-    color: $second-color;
+    color: $second-color !important;
     background-color: $main-color;
     text-transform: uppercase;
     text-decoration: none;
@@ -30,7 +30,7 @@
     }
 
     &:hover {
-      color: $button-color;
+      color: $button-color !important;
       background-color: $second-color;
     }
 

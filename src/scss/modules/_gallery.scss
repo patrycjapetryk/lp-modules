@@ -11,8 +11,13 @@
     justify-content: space-around;
   }
 
-  &--fullscreen {
+  @media (max-width: $breakpoint-mobile-width) {
     width: 100vw;
+  }
+
+  &--fullscreen {
+    // width: 100vw;
+    width: var(--viewportWidth);
   }
 
   &--center {
@@ -26,34 +31,77 @@
     width: 100%;
     position: relative;
 
+    &--xl {
+      // horizontal item
+      @media (max-width: $main-max-width) {
+        .gallery__header {
+          margin-left: 4px;
+        }
+      }
+    }
     &--l {
+      // large vertical item
       width: 50%;
 
       @media (max-width: $breakpoint-mobile-width) {
         width: 100%;
+        .gallery__header {
+          margin-left: 4px;
+        }
       }
     }
 
     &--m {
+      // two large items
       width: 50%;
+
+      &:first-child .gallery__header {
+        margin-left: 4px;
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        margin-bottom: calc($gap-mobile / -2.4);
+      }
     }
 
     &--s {
+      // two items
       width: 42%;
 
       @media (max-width: $breakpoint-tablet-width) {
         width: 50%;
+
+        &:first-child .gallery__header {
+          margin-left: 4px;
+        }
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        margin-bottom: calc($gap-mobile / -2.4);
       }
     }
 
     &--xs {
+      // four items
       width: 24%;
 
       @media (max-width: $breakpoint-tablet-width) {
         width: 50%;
 
         &:first-child {
-          margin-bottom: $gap-mobile;
+          margin-bottom: calc($gap-mobile);
+        }
+
+        &:nth-child(odd) .gallery__header {
+          margin-left: 4px;
+        }
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        margin-bottom: calc($gap-mobile / -2.4);
+
+        &:first-child {
+          margin-bottom: calc($gap-mobile / 2);
         }
       }
     }
@@ -69,12 +117,13 @@
 
   &__header {
     position: relative;
-    width: 100%;
+    width: 90%;
+    margin-left: 2px;
   }
 
   &__info {
     position: absolute;
-    left: 2px;
+    left: 0;
     top: 6px;
     font-size: $global-font-size-s;
     font-weight: $global-font-weight;
@@ -90,7 +139,7 @@
     font-size: $global-font-size;
     font-weight: $global-font-weight;
     padding: 0;
-    margin: 25px 0 0 2px;
+    margin: 25px 0 0 0;
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: $global-font-size-m;
@@ -102,11 +151,12 @@
     font-size: $global-font-size-l;
     font-weight: $global-font-weight;
     text-transform: uppercase;
-    margin: 3px 0 0 2px;
+    margin: 3px 0 0 0;
+    color: $main-color;
 
     @media (max-width: $breakpoint-mobile-width) {
       font-size: $global-font-size-ms;
-      margin: 0 0 0 2px;
+      margin: 0;
     }
   }
 

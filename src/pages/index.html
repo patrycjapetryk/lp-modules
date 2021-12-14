@@ -414,7 +414,7 @@
       </div>
 
       <div class="gallery gallery--center">
-        <div class="gallery__item">
+        <div class="gallery__item gallery__item--xl">
           <div class="gallery__wrapper">
             <a href="#" class="gallery__link">
               <picture>
@@ -447,19 +447,32 @@
       </div>
     </div>
 
-    <script defer>
-      (() => {
-        'use strict';
+    <script>
+      (function () {
+        var scrollbarWidth = window.innerWidth - document.body.clientWidth;
+
+        if (navigator.appVersion.indexOf('Win') != -1) {
+          document.body.style.setProperty(
+            '--scrollbarWidth',
+            `${scrollbarWidth}px`,
+          );
+        } else {
+          document.body.style.setProperty('--scrollbarWidth', `0px`);
+        }
+
+        //
+
         var videoTag = document.querySelector('.header__video--js'),
           videoSourceTag = document.querySelector('.header__video--js source'),
           videoSourceSrc = videoSourceTag.getAttribute('src'),
-          videoSourceDataSrc = videoSourceTag.getAttribute('data-src');
+          videoSourceDataSrc = videoSourceTag.getAttribute('data-src'),
+          tabletMediaQuery = 764;
 
         function setVideoSource() {
           var windowWidth = window.innerWidth,
             videoSource = videoSourceTag.getAttribute('src');
 
-          if (windowWidth > 764) {
+          if (windowWidth > tabletMediaQuery) {
             if (videoSource !== videoSourceDataSrc) {
               videoSourceTag.setAttribute('src', videoSourceDataSrc);
               videoTag.load();
