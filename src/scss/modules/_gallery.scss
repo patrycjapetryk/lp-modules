@@ -58,10 +58,6 @@
       &:first-child .gallery__header {
         margin-left: 4px;
       }
-
-      @media (max-width: $breakpoint-mobile-width) {
-        margin-bottom: calc($gap-mobile / -2.4);
-      }
     }
 
     &--s {
@@ -75,10 +71,6 @@
           margin-left: 4px;
         }
       }
-
-      @media (max-width: $breakpoint-mobile-width) {
-        margin-bottom: calc($gap-mobile / -2.4);
-      }
     }
 
     &--xs {
@@ -89,19 +81,11 @@
         width: 50%;
 
         &:first-child {
-          margin-bottom: calc($gap-mobile);
+          margin-bottom: $gap-mobile;
         }
 
         &:nth-child(odd) .gallery__header {
           margin-left: 4px;
-        }
-      }
-
-      @media (max-width: $breakpoint-mobile-width) {
-        margin-bottom: calc($gap-mobile / -2.4);
-
-        &:first-child {
-          margin-bottom: calc($gap-mobile / 2);
         }
       }
     }

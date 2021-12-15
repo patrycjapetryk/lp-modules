@@ -10,6 +10,10 @@
   letter-spacing: $button-letter-spacing;
   margin-top: -50px;
 
+  @media (max-width: $breakpoint-tablet-width) {
+    margin-top: 0;
+  }
+
   &__link {
     display: block;
     padding: $button-padding;
